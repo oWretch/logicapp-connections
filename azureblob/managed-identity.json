@@ -43,7 +43,7 @@
   "resources": [
     {
       "type": "Microsoft.Web/connections",
-      "apiVersion": "2016-06-01",
+      "apiVersion": "2018-07-01-preview",
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "kind": "V2",
@@ -53,7 +53,8 @@
           "id": "[concat(subscription().id, '/providers/Microsoft.Web/locations/', parameters('location'), '/managedApis/azureblob')]"
         },
         "parameterValueSet": {
-          "name": "managedIdentityAuth"
+          "name": "managedIdentityAuth",
+          "values": {}
         }
       }
     },
